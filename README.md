@@ -1,5 +1,5 @@
 # Green Earth Recycling Website
-![Screnshoot](imgs/Jeansify-online-shop.png)
+![Screnshoot](./img/GERScreenshot%20.png)
 
 This project is a simple 4-pages website for a recycling company named **Green Earth Recycling**. It provides information about the company's recycling efforts and environmental initiatives. The site is built using HTML and CSS with a modern dark theme and includes social media and contact links in the footer.
 
