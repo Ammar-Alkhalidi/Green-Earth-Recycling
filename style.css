@@ -1,0 +1,488 @@
+/* Reset styles */
+* {
+  @import url(https://fonts.bunny.net/css?family=akaya-kanadaka:400|alkatra:500|faster-one:400);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alkatra", display;
+  background-color: #121212;
+  color: #ecf0b5;
+}
+
+/* Left Side Menu */
+.side-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #1a1a1a;
+  padding-top: 2rem;
+}
+.logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: green; /* Fallback color */
+}
+.side-menu ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.side-menu ul li {
+  margin: 1rem 0;
+}
+
+.side-menu ul li a {
+  font-family: "Alkatra", display;
+  color: #ecf0b5;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.side-menu ul li a:hover {
+  background-color: #00c853;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  margin-left: 200px;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+.hero h1,
+.hero p {
+  background-color: #00c853;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 0.5rem;
+}
+
+/* Projects Section */
+.projects {
+  margin-left: 200px;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 2rem;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  cursor: pointer;
+  background-color: #282828;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 30%;
+  text-align: center;
+  transition: transform 2s ease;
+}
+.card:hover {
+  transform: scale(1.2);
+  transition: transform 2s ease;
+  color: #00c853;
+}
+.card-img {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.project1 {
+  background-image: url("./img/craiyon_105742_A_small_miniature_car_made_of_moss__product_photo__miniature.png");
+}
+
+.project2 {
+  background-image: url("./img/craiyon_105326_Recycling__projects.png");
+}
+
+.project3 {
+  background-image: url("./img/craiyon_105514_Recycling__projects.png");
+}
+.project4 {
+  background-image: url("./img/Plastic\ Bottle\ Recycling.png");
+}
+
+.project5 {
+  background-image: url("./img/Composting\ Organic\ Waste.png");
+}
+
+.project6 {
+  background-image: url("./img/E-Waste-Devices.png");
+}
+
+.card h3 {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  padding: 0 1rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content p {
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  margin: 0 0.5rem;
+  color: #f0f0f0;
+  font-size: 1.5rem;
+}
+
+.social-icon:hover {
+  color: #00c853;
+  transform: scale(1.2);
+  transition: transform 2s ease;
+}
+
+.social-icon i {
+  transition: color 0.3s ease;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For small devices (phones, <768px) */
+@media (max-width: 767px) {
+  /* Remove fixed side menu and stack content */
+  .side-menu {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    background-color: #1a1a1a;
+  }
+
+  .side-menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .hero {
+    margin-left: 0;
+    height: 40vh;
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Stack project cards vertically */
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Adjust footer for smaller devices */
+  footer {
+    padding: 1.5rem;
+  }
+
+  .footer-content {
+    align-items: flex-start;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+}
+
+/* For tablets and medium devices (>=768px and <1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust hero for tablets */
+  .hero {
+    margin-left: 200px;
+    height: 50vh;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  /* Stack project cards with two columns on tablets */
+  .project-cards {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 45%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* For laptops and desktops (>=1024px) */
+@media (min-width: 1024px) {
+  /* Hero adjustments for larger screens */
+  .hero {
+    margin-left: 200px;
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  /* Project cards with three columns */
+  .project-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 30%;
+  }
+}
+
+/* About */
+.about-bg {
+  width: 100%;
+}
+
+/* Chart */
+.test {
+  height: 40px;
+  color: rgb(0, 0, 0);
+  margin: 6px;
+  transition: width 1s;
+}
+
+.a {
+  transition-timing-function: linear;
+  background-color: red;
+  width: 100px;
+}
+.b {
+  transition-timing-function: ease;
+  background-color: orange;
+  width: 150px;
+}
+.c {
+  transition-timing-function: ease-in;
+  background-color: yellow;
+  width: 200px;
+}
+.d {
+  transition-timing-function: ease-out;
+  background-color: lightseagreen;
+  width: 250px;
+}
+.e {
+  transition-timing-function: ease-in-out;
+  background-color: #00c853;
+  width: 300px;
+}
+
+.test:hover {
+  width: 450px;
+}
+/* Offers */
+.proje {
+  margin-left: 200px;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+.proje h2 {
+  margin-bottom: 2rem;
+}
+
+.proje-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.proje1 {
+  background-image: url("./img/Screenshot\ from\ 2024-08-27\ 11-53-03.png");
+}
+
+.proje2 {
+  background-image: url("./img/Screenshot\ from\ 2024-08-27\ 11-50-38.png");
+}
+
+.proje3 {
+  background-image: url("./img/Screenshot\ from\ 2024-08-27\ 11-50-58.png");
+}
+.proje4 {
+  background-image: url("./img/Screenshot\ from\ 2024-08-27\ 11-49-04.png");
+}
+
+.proje5 {
+  background-image: url("./img/Screenshot\ from\ 2024-08-27\ 11-52-46.png");
+}
+
+.proje6 {
+  background-image: url("./img/Screenshot\ from\ 2024-08-27\ 11-51-26.png");
+}
+
+/* Contact Section  */
+.contact-section {
+  margin-left: 200px;
+  padding: 2rem;
+  background-image: url("./img/Screenshot\ from\ 2024-08-27\ 11-52-46.png");
+  background-size: cover;
+  background-position: center;
+  color: #ecf0b5;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Dark overlay for better text visibility */
+  z-index: -1;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(40, 40, 40, 0.9); /* Semi-transparent background */
+  border-radius: 8px;
+}
+
+.contact-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #00c853;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border: 2px solid #00c853;
+}
+
+.btn {
+  background-color: #00c853;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #007a39;
+}
